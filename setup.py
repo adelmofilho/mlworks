@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="mlworks-adelmofilho", # Replace with your own username
+    name="mlworks",
     version="0.0.1",
     author="Adelmo Filho",
     author_email="adelmo.aguiar.filho@gmail.com",
