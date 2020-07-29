@@ -9,7 +9,6 @@ Python Package for Unlimited Machine Learning Works
 
 [![docs](https://readthedocs.org/projects/cookiecutter/badge/?version=latest)](https://readthedocs.org/projects/cookiecutter/?badge=latest)
 
-[![Code Quality](https://img.shields.io/scrutinizer/g/cookiecutter/cookiecutter.svg)](https://scrutinizer-ci.com/g/cookiecutter/cookiecutter/?branch=master)
+[![Code Quality](https://img.shields.io/scrutinizer/g/adelmofilho/mlworks.svg)](https://scrutinizer-ci.com/g/adelmofilho/mlworks/badges/quality-score.png?b=master)
 
-
-https://img.shields.io/github/license/adelmofilho/mlworks?color=red
+[![license](https://img.shields.io/github/license/adelmofilho/mlworks?color=red)](https://scrutinizer-ci.com/g/adelmofilho/mlworks/badges/quality-score.png?b=master)
