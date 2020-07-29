@@ -7,6 +7,4 @@ Python Package for Unlimited Machine Learning Works
 [![codecov](https://codecov.io/gh/adelmofilho/mlworks/branch/master/graphs/badge.svg?branch=master)](https://codecov.io/github/adelmofilho/mlworks?branch=master)
 [![Code Quality](https://img.shields.io/scrutinizer/g/adelmofilho/mlworks.svg)](https://scrutinizer-ci.com/g/adelmofilho/mlworks/badges/quality-score.png?b=master)
 [![license](https://img.shields.io/github/license/adelmofilho/mlworks?color=blue)](https://scrutinizer-ci.com/g/adelmofilho/mlworks/badges/quality-score.png?b=master)
-
-
-[![docs](https://readthedocs.org/projects/cookiecutter/badge/?version=latest)](https://readthedocs.org/projects/cookiecutter/?badge=latest)
+[![docs](https://readthedocs.org/projects/mlworks/badge/?version=latest)](https://readthedocs.org/projects/mlworks/?badge=latest)
