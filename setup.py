@@ -13,7 +13,7 @@ requirements = [
 
 setup(
     name="mlworks",
-    version="0.0.1",
+    version="0.0.2",
     author="Adelmo Filho",
     author_email="adelmo.aguiar.filho@gmail.com",
     description="Python Package for Unlimited Machine Learning Works",
