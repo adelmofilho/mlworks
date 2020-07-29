@@ -1,9 +1,17 @@
-import setuptools
+#!/usr/bin/env python
+"""mlworks distutils configuration."""
+from setuptools import setup
+from setuptools import find_packages
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
-setuptools.setup(
+requirements = [
+    'numpy',
+    'pandas'
+]
+
+setup(
     name="mlworks",
     version="0.0.1",
     author="Adelmo Filho",
@@ -12,11 +20,26 @@ setuptools.setup(
     long_description="This package implements several machine learning pipelines as a file",
     long_description_content_type="text/markdown",
     url="https://github.com/adelmofilho/mlworks",
-    packages=setuptools.find_packages(),
+    packages=find_packages(),
+    install_requires=requirements,
     classifiers=[
+        "Programming Language :: Python :: 3 :: Only",
         "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
+        "Topic :: Machine Learning"
+    ],
+    keywords=[
+        "mlworks",
+        "Python",
+        "projects",
+        "machine-learning",
+        "feature-engineering",
+        "modelling",
+        "data-science"
     ],
     python_requires='>=3.6',
 )
