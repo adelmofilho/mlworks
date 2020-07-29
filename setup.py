@@ -30,7 +30,9 @@ setup(
         "Programming Language :: Python :: 3.8",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
-        "Topic :: Machine Learning"
+        "Development Status :: 1 - Planning",
+        "Natural Language :: Portuguese (Brazilian)",
+        "Topic :: Scientific/Engineering :: Artificial Intelligence"
     ],
     keywords=[
         "mlworks",
