@@ -11,3 +11,4 @@ Python Package for Unlimited Machine Learning Works
 [![docs](https://readthedocs.org/projects/mlworks/badge/?version=latest)](https://readthedocs.org/projects/mlworks/?badge=latest)
 [![Upload PyPI](https://github.com/adelmofilho/mlworks/workflows/Upload%20Python%20Package/badge.svg)](https://github.com/adelmofilho/mlworks/actions)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/adelmofilho/mlworks/issues)
+![Python package](https://github.com/adelmofilho/mlworks/workflows/Python%20package/badge.svg)
