@@ -1,20 +1,14 @@
-import numpy as np
-import pandas as pd
-
-
 class Blueprint:
 
     def __init__(self, data):
         self.data = data
 
-
     def create_plan(self):
         self.plan = dict()
 
-
     def __include_on_list(self, plan, key, features):
 
-        if plan.get(key, True) is True:            
+        if plan.get(key, True) is True:
             plan[key] = features
         else:
             plan[key] = plan[key] + features
@@ -38,7 +32,7 @@ class Blueprint:
     def keep_original_feature(self, features):
         key = "keep_original_feature"
         self.plan = self.__include_on_list(self.plan, key, features)
-    
+
     # Imputation methods
 
     def impute_missing_as_category(self, features):
@@ -46,18 +40,15 @@ class Blueprint:
         self.plan = self.__include_on_list(self.plan, key, features)
         return self
 
-
     def impute_missing_as_inf(self, features):
         key = "impute_missing_as_inf"
         self.plan = self.__include_on_list(self.plan, key, features)
         return self
 
-    
     def impute_missing_as_zero(self, features):
         key = "impute_missing_as_zero"
         self.plan = self.__include_on_list(self.plan, key, features)
         return self
-
 
     def impute_missing_as_number(self, features, number):
         key = "impute_missing_as_number"
