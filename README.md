@@ -1,6 +1,7 @@
 # mlworks
 Python Package for Unlimited Machine Learning Works
 
+[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 [![pypi](https://img.shields.io/pypi/v/mlworks)](https://pypi.org/project/mlworks/)
 [![python](https://img.shields.io/pypi/pyversions/mlworks)](https://pypi.org/project/mlworks/)
 [![Build Status](https://api.travis-ci.org/adelmofilho/mlworks.svg?branch=master&status=unknown)](https://travis-ci.org/github/adelmofilho/mlworks/)
@@ -9,3 +10,6 @@ Python Package for Unlimited Machine Learning Works
 [![license](https://img.shields.io/github/license/adelmofilho/mlworks?color=blue)](https://scrutinizer-ci.com/g/adelmofilho/mlworks/badges/quality-score.png?b=master)
 [![docs](https://readthedocs.org/projects/mlworks/badge/?version=latest)](https://readthedocs.org/projects/mlworks/?badge=latest)
 [![Upload PyPI](https://github.com/adelmofilho/mlworks/workflows/Upload%20Python%20Package/badge.svg)](https://github.com/adelmofilho/mlworks/actions)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/adelmofilho/mlworks/issues)
+[![HitCount](http://hits.dwyl.com/adelmofilho/mlworks.svg)](http://hits.dwyl.com/adelmofilho/mlworks)
+[![Known Vulnerabilities](https://snyk.io/test/github/adelmofilho/mlworks/badge.svg?targetFile=tests/requirements.txt)](https://snyk.io/test/github/adelmofilho/mlworks?targetFile=tests/requirements.txt)
