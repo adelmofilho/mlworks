@@ -17,7 +17,7 @@ setup(
     author="Adelmo Filho",
     author_email="adelmo.aguiar.filho@gmail.com",
     description="Python Package for Unlimited Machine Learning Works",
-    long_description="This package implements several machine learning pipelines as a file",
+    long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/adelmofilho/mlworks",
     packages=find_packages(),
