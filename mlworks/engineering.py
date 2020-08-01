@@ -20,11 +20,9 @@ class Blueprint:
             plan[key] = {}
             if len(value) == 1:
                 value = value * len(features)
-            plan[key]["var"] = features
-            plan[key]["value"] = value
-        else:
-            plan[key]["var"] = plan[key]["var"] + features
-            plan[key]["value"] = plan[key]["value"] + value
+        for var_index in range(len(features)):
+            plan[key][features[var_index]] = features[var_index]
+            plan[key][features[var_index]] = value[var_index]
         return plan
 
     def __include_on_custom_list(self, key, features, extra_class):
