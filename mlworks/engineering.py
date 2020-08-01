@@ -27,9 +27,10 @@ class Blueprint:
             plan[key]["value"] = plan[key]["value"] + value
         return plan
 
-    def __include_on_custom_list
+    def __include_on_custom_list(self, key, features, extra_class):
+        return None
 
-    def __include_on_order_list(plan, key, feature, order):
+    def __include_on_order_list(self, key, feature, order):
         return None
 
     def __include_on_operation_list(self, key, feature, operation):
@@ -79,7 +80,7 @@ class Blueprint:
     def binning_one_hot_encoding(self, features):
         key = "binning_one_hot_encoding"
         self.plan = self.__include_on_list(self.plan, key, features)
-        return self    
+        return self
 
     def binning_add_extra_class(self, features, extra_class):
         key = "binning_add_extra_class"
@@ -90,14 +91,13 @@ class Blueprint:
         key = "binning_custom_classes"
         self.plan = self.__include_on_custom_list(self.plan, key, features, extra_class)
         return self
-    
+
     # Transform
 
     def transform_category_to_order(self, feature, order):
         key = "transform_category_to_order"
         self.plan = self.__include_on_order_list(self.plan, key, feature, order)
         return self
-
 
     def transform_linear(self, feature, operation):
         key = "transform_linear"
