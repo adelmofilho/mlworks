@@ -28,8 +28,19 @@ class Blueprint:
     def __include_on_custom_list(self, key, features, extra_class):
         return None
 
-    def __include_on_order_list(self, key, feature, order):
-        return None
+    def __include_on_order_list(self, plan, key, features, order, grade = None):
+
+        if plan.get(key, True) is True:
+            plan[key] = {}
+        for var_index in range(len(features)):
+            plan[key][features[var_index]] = {}
+            plan[key][features[var_index]]["order"] = order[var_index]
+            if grade is None:
+                gradeOrder = list(reversed(list(range(len(order[var_index])))))
+            else:
+                gradeOrder = grade[var_index]
+            plan[key][features[var_index]]["grade"] = gradeOrder
+        return plan
 
     def __include_on_operation_list(self, key, feature, operation):
         return None
@@ -92,9 +103,9 @@ class Blueprint:
 
     # Transform
 
-    def transform_category_to_order(self, feature, order):
+    def transform_category_to_order(self, features, order, grade = None):
         key = "transform_category_to_order"
-        self.plan = self.__include_on_order_list(self.plan, key, feature, order)
+        self.plan = self.__include_on_order_list(self.plan, key, features, order, grade = None)
         return self
 
     def transform_linear(self, feature, operation):
