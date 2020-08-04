@@ -25,8 +25,14 @@ class Blueprint:
             plan[key][features[var_index]] = value[var_index]
         return plan
 
-    def __include_on_custom_list(self, key, features, extra_class):
-        return None
+    def __include_on_custom_list(self, plan, key, feature, classes):
+        
+        if plan.get(key, True) is True:
+            plan[key] = {}
+        plan[key][feature] = {}
+        for var_index in range(len(classes)):
+            plan[key][feature]["class" + str(var_index)] = classes[var_index]
+        return plan
 
     def __include_on_order_list(self, plan, key, features, order, grade = None):
 
