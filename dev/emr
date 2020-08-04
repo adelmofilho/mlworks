@@ -1,0 +1,57 @@
+[
+  {
+    "Id": "j-3J8K0EDBCJWQQ",
+    "Name": "My cluster",
+    "Status": {
+      "State": "WAITING",
+      "StateChangeReason": {
+        "Message": "Cluster ready after last step completed."
+      },
+      "Timeline": {
+        "CreationDateTime": "2020-08-04T17:08:42.164000+00:00",
+        "ReadyDateTime": "2020-08-04T17:14:00.519000+00:00"
+      }
+    },
+    "Ec2InstanceAttributes": {
+      "Ec2SubnetId": "subnet-c702d1a1",
+      "RequestedEc2SubnetIds": [
+        "subnet-c702d1a1"
+      ],
+      "Ec2AvailabilityZone": "sa-east-1a",
+      "RequestedEc2AvailabilityZones": [],
+      "IamInstanceProfile": "EMR_EC2_DefaultRole",
+      "EmrManagedMasterSecurityGroup": "sg-0fd30424401c225d4",
+      "EmrManagedSlaveSecurityGroup": "sg-0d1bbb05dac8f56f3"
+    },
+    "InstanceCollectionType": "INSTANCE_GROUP",
+    "LogUri": "s3n://aws-logs-977053370764-sa-east-1/elasticmapreduce/",
+    "ReleaseLabel": "emr-5.30.1",
+    "AutoTerminate": false,
+    "TerminationProtected": false,
+    "VisibleToAllUsers": true,
+    "Applications": [
+      {
+        "Name": "Spark",
+        "Version": "2.4.5"
+      },
+      {
+        "Name": "Zeppelin",
+        "Version": "0.8.2"
+      }
+    ],
+    "Tags": [],
+    "ServiceRole": "EMR_DefaultRole",
+    "NormalizedInstanceHours": 0,
+    "MasterPublicDnsName": "ec2-54-94-251-136.sa-east-1.compute.amazonaws.com",
+    "Configurations": [
+      {
+        "Classification": "spark",
+        "Properties": {}
+      }
+    ],
+    "ScaleDownBehavior": "TERMINATE_AT_TASK_COMPLETION",
+    "KerberosAttributes": {},
+    "ClusterArn": "arn:aws:elasticmapreduce:sa-east-1:977053370764:cluster/j-3J8K0EDBCJWQQ",
+    "StepConcurrencyLevel": 1
+  }
+]
