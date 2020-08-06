@@ -26,7 +26,7 @@ class Blueprint:
         return plan
 
     def __include_on_custom_list(self, plan, key, feature, classes):
-        
+
         if plan.get(key, True) is True:
             plan[key] = {}
         plan[key][feature] = {}
@@ -34,7 +34,7 @@ class Blueprint:
             plan[key][feature]["class" + str(var_index)] = classes[var_index]
         return plan
 
-    def __include_on_order_list(self, plan, key, features, order, grade = None):
+    def __include_on_order_list(self, plan, key, features, order, grade=None):
 
         if plan.get(key, True) is True:
             plan[key] = {}
@@ -109,12 +109,12 @@ class Blueprint:
 
     # Transform
 
-    def transform_category_to_order(self, features, order, grade = None):
+    def transform_category_to_order(self, features, order, grade=None):
         key = "transform_category_to_order"
-        self.plan = self.__include_on_order_list(self.plan, key, features, order, grade = None)
+        self.plan = self.__include_on_order_list(self.plan, key, features, order, grade=None)
         return self
 
-    def transform_linear(self, feature, operation):
+    def transform_linear(self, features, number):
         key = "transform_linear"
-        self.plan = self.__include_on_operation_list(self.plan, key, feature, operation)
+        self.plan = self.__include_on_pairwise_list(self.plan, key, features, number)
         return self
