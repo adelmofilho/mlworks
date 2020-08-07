@@ -1,8 +1,13 @@
-def exec_impute_missing_as_category(df, plan):
+def exec_impute_missing(data, plan, key):
 
-    features = plan["impute_missing_as_category"]
+    features = plan[key]
 
-    df[features] = df[features].fillna('missing', inplace=True)
+    if key == "impute_missing_as_inf":
 
-    return df
-        
+        data[features] = data[features].fillna(float('Inf'))
+
+    elif key == "impute_missing_as_category":
+
+        data[features] = data[features].fillna('missing')
+
+    return data
