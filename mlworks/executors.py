@@ -21,3 +21,7 @@ def exec_impute_missing(data, plan, key):
             data[var] = data[var].fillna(features[var])
 
     return data
+
+
+def exec_binning_one_hot_encoding(data, plan):
+    pass

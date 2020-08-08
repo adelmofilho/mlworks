@@ -114,6 +114,4 @@ def test_exec_impute():
     proof["var3"] = [float(0)] * 10
     proof["var4"] = [float(8)] * 10
 
-    print(proof)
-    print(df)
     assert proof.equals(df)
