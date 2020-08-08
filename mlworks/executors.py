@@ -10,4 +10,14 @@ def exec_impute_missing(data, plan, key):
 
         data[features] = data[features].fillna('missing')
 
+    elif key == "impute_missing_as_zero":
+
+        data[features] = data[features].fillna(0)
+
+    elif key == "impute_missing_as_number":
+
+        for var in features:
+
+            data[var] = data[var].fillna(features[var])
+
     return data

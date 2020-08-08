@@ -138,6 +138,16 @@ class Blueprint:
             plan=self.plan,
             key="impute_missing_as_category")
 
+        self.eng_data = exec_impute_missing(
+            data=self.eng_data,
+            plan=self.plan,
+            key="impute_missing_as_zero")
+
+        self.eng_data = exec_impute_missing(
+            data=self.eng_data,
+            plan=self.plan,
+            key="impute_missing_as_number")
+
         return self.eng_data
 
 #         X_columns = []

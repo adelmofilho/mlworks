@@ -88,3 +88,32 @@ def test_blueprint_plan():
         }
     }
     assert bpr.plan == plan_correct
+
+
+def test_exec_impute():
+
+    df = pd.DataFrame()
+    df["var1"] = [float('nan')] * 10
+    df["var2"] = [float('nan')] * 10
+    df["var3"] = [float('nan')] * 10
+    df["var4"] = [float('nan')] * 10
+
+    bpr = Blueprint(df)
+    bpr.create_plan()
+
+    bpr.impute_missing_as_category(['var1']).\
+        impute_missing_as_inf(['var2']).\
+        impute_missing_as_zero(['var3']).\
+        impute_missing_as_number(['var4'], [8])
+
+    bpr.execute()
+
+    proof = pd.DataFrame()
+    proof["var1"] = ['missing'] * 10
+    proof["var2"] = [float('Inf')] * 10
+    proof["var3"] = [float(0)] * 10
+    proof["var4"] = [float(8)] * 10
+
+    print(proof)
+    print(df)
+    assert proof.equals(df)
