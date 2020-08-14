@@ -1,4 +1,5 @@
 from mlworks.executors import exec_impute_missing
+from mlworks.executors import exec_binning_one_hot_encoding
 
 
 class Blueprint:
@@ -126,29 +127,69 @@ class Blueprint:
 
     def execute(self):
 
+        self.eng_columns = []
         self.eng_data = self.data
 
-        self.eng_data = exec_impute_missing(
-            data=self.eng_data,
-            plan=self.plan,
-            key="impute_missing_as_inf")
+        def exec_impute_missing(self, key):
 
-        self.eng_data = exec_impute_missing(
-            data=self.eng_data,
-            plan=self.plan,
-            key="impute_missing_as_category")
+            features = self.plan[key]
 
-        self.eng_data = exec_impute_missing(
-            data=self.eng_data,
-            plan=self.plan,
-            key="impute_missing_as_zero")
+            if key == "impute_missing_as_inf":
 
-        self.eng_data = exec_impute_missing(
-            data=self.eng_data,
-            plan=self.plan,
-            key="impute_missing_as_number")
+                self.eng_data[features] = self.eng_data[features].fillna(float('Inf'))
 
-        return self.eng_data
+            elif key == "impute_missing_as_category":
+
+                self.eng_data[features] = self.eng_data[features].fillna('missing')
+
+            elif key == "impute_missing_as_zero":
+
+                self.eng_data[features] = self.eng_data[features].fillna(0)
+
+            elif key == "impute_missing_as_number":
+
+                for var in features:
+
+                    self.eng_data[var] = self.eng_data[var].fillna(features[var])
+
+            return self.eng_data
+
+        myDict = {
+            "P1": (lambda x: function1()),
+            "P2": (lambda x: function2()),
+            "Pn": (lambda x: functionn())}
+        
+        myItems = self.plan.keys()
+
+        for item in myItems:
+            myDict[item]()
+
+        # self.eng_data = exec_impute_missing(
+        #     data=self.eng_data,
+        #     plan=self.plan,
+        #     key="impute_missing_as_inf")
+
+        # self.eng_data = exec_impute_missing(
+        #     data=self.eng_data,
+        #     plan=self.plan,
+        #     key="impute_missing_as_category")
+
+        # self.eng_data = exec_impute_missing(
+        #     data=self.eng_data,
+        #     plan=self.plan,
+        #     key="impute_missing_as_zero")
+
+        # self.eng_data = exec_impute_missing(
+        #     data=self.eng_data,
+        #     plan=self.plan,
+        #     key="impute_missing_as_number")
+
+        # [self.data, self.eng_columns] = exec_binning_one_hot_encoding(
+        #     data=self.eng_data,
+        #     plan=self.plan,
+        #     eng_columns=self.eng_columns)
+
+        # return self.eng_data[self.eng_columns]
 
 #         X_columns = []
 #         # #Dummy faltante
@@ -166,15 +207,6 @@ class Blueprint:
 #                 new_var = str(var) + "_" + str(classe)
 #                 X_columns = X_columns + [new_var]
 #                 df[new_var] = df[var].fillna("missing").isin(self.params["dummy_controlada"][var][classe])/
-#         # # Missing number to Inf
-#         df[self.params["missing_number_to_inf"]] = df[self.params["missing_number_to_inf"]].fillna('missing')
-#         for var in self.params["missing_number_to_inf"]:
-#             X_columns = X_columns +  [var + '_miss_num']
-#             df[[var + '_miss_num']] = df[[var]].replace("missing", -100 )
-#         # # Binary to class
-#         binary_dummy = pd.get_dummies(data=df[self.params["binary_dummies"]], drop_first = True)
-#         df[list(binary_dummy.columns)] = binary_dummy
-#         # X_columns =  X_columns + list(binary_dummy.columns)
 #         # Unify to class
 #         for var in self.params["unify_classes"].keys():
 #             X_columns = X_columns +  [var + '_unify']

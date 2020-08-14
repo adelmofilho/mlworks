@@ -1,3 +1,6 @@
+import pandas as pd
+
+
 def exec_impute_missing(data, plan, key):
 
     features = plan[key]
@@ -23,5 +26,10 @@ def exec_impute_missing(data, plan, key):
     return data
 
 
-def exec_binning_one_hot_encoding(data, plan):
-    pass
+def exec_binning_one_hot_encoding(data, plan, eng_columns):
+     
+     binary_dummy = pd.get_dummies(data[plan["binning_one_hot_encoding"]], drop_first = True)
+     data[list(binary_dummy.columns)] = binary_dummy
+     eng_columns = eng_columns + list(binary_dummy.columns)
+
+     return data, eng_columns
