@@ -31,10 +31,11 @@ Before
 
 ## Manifest
 
-<p style="margin:0px;text-align:right"><cite>modellling never ends, this is just the beginning </cite></p>
+<p style="text-align:right";>modelling never ends, this is just the beginning</p>
 <br>
 
 É comum ouvir que ciência de dados não é uma exata.
+
 
 
 
