@@ -1,6 +1,6 @@
 <img src="https://i.imgur.com/FFSqVJ8.png">
 
-Python Package for Unlimited Machine Learning Works
+A python package for (unlimited) Machine Learning Works
 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/adelmofilho/mlworks/issues)
 [![Project Status: WIP](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
@@ -19,24 +19,16 @@ Python Package for Unlimited Machine Learning Works
 
 ## Instalação  
 
-The easiest way to install mlworks is using `pip3`.
+Realize a instalação via `pip3`.
 
 ```
-pip3 install -U mlworks
+pip3 install --upgrade mlworks
 ```
 
 ## Documentação
 
-Before 
+A documentação mais recente pode ser encontrada no [read the docs](https://mlworks.readthedocs.io/en/latest/) do projeto.
 
-## Manifest
+## Licença
 
-<p style="text-align:right";>modelling never ends, this is just the beginning</p>
-<br>
-
-É comum ouvir que ciência de dados não é uma exata.
-
-
-
-
-![](https://images.squarespace-cdn.com/content/v1/59d9b2749f8dce3ebe4e676d/1575488479938-IWTDXWR51BO9HIU1WQTH/ke17ZwdGBToddI8pDm48kHn8_gAT8dr6cuIRK2bAcYJZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxBzV0n8MtV_GpjgguT6nxBHUB9roTBL0ERBAwWHi4_X50XXvYa8NzP_7TvKmPHPBU/technical-debt.png?format=750w)
+Este projeto está licenciado sob a [licença MIT](https://github.com/adelmofilho/mlworks/blob/master/LICENSE).
