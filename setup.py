@@ -21,6 +21,11 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/adelmofilho/mlworks",
     packages=find_packages(),
+    entry_points={
+        'console_scripts': [
+            'mlw=cli.mlwcli:mlwcli'
+        ]
+    },
     install_requires=requirements,
     classifiers=[
         "Programming Language :: Python :: 3 :: Only",
